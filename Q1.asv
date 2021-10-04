@@ -1,0 +1,9 @@
+clear
+
+%latitude and longitude
+E_lat = 50.38;
+E_lon = -72.11;
+omega = 0.755;
+
+P_lat = 30;
+P_lon = 30;

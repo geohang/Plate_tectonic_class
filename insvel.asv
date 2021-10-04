@@ -1,0 +1,29 @@
+clear
+
+%latitude and longitude
+E_lat = 50.38;
+E_lon = -72.11;
+omega = 0.755;
+
+P_lat = 30;
+P_lon = 30;
+
+R = 6378.1*1e6; % in mm
+
+Ex = cosd(E_lat)*cosd(E_lon);
+Ey = cosd(E_lat)*sind(E_lon);
+Ez = sind(E_lat);
+
+Px = cosd(P_lat)*cosd(P_lon);
+Py = cosd(P_lat)*sind(P_lon);
+Pz = sind(P_lat);
+
+
+V = omega.*R.*cross([Ex;Ey;Ez],[Px;Py;Pz]);
+
+Trans_mat=[-sind(P_lat)*cosd(P_lon),-sind(P_lat)*sind(P_lon),cosd(P_lat);...
+           -sind];
+
+
+
+
